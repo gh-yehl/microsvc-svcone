@@ -38,12 +38,12 @@ public class Service1Application {
     @RequestMapping("/call2")
     public String callService2(){
         System.out.println("Make call2...");
-        return restTemplate.getForObject("http://localhost:8772/call2", String.class);
+        return restTemplate.getForObject("http://svctwo.ibm-services:8080/call2", String.class);
     }
 
     @RequestMapping("/call3")
     public String callService3(){
         System.out.println("Make call3 ...");
-        return restTemplate.getForObject("http://localhost:8772/call3", String.class);
+        return restTemplate.getForObject("http://svctwo.ibm-services:8080/call3", String.class);
     }
 }
