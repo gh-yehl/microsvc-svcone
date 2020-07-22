@@ -24,6 +24,12 @@ public class Service1Application {
         return new RestTemplate();
     }
 
+    @RequestMapping("/test")
+    public String test(){
+        System.out.println("Service-1 called... from /test");
+        return "Svc1 is responding ...";
+    }
+    
     @RequestMapping("/call1")
     public String callService1(){
         return "Service1 called...";
