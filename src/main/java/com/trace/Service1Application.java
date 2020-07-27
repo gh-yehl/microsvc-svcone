@@ -49,13 +49,13 @@ public class Service1Application {
     
     
     @RequestMapping("/eurekaInternal")
-    public String callService3(){
+    public String eurekaInternal(){
         System.out.println("Make call to eureka's internal service ...");
         return restTemplate.getForObject("http://eureka.tools:8080/testInternal", String.class);
     }
     
         @RequestMapping("/eurekaExternal")
-    public String callService3(){
+    public String eurekaExternal(){
         System.out.println("Make call to eureka's external service ...");
         return restTemplate.getForObject("http://eureka.tools:8080/testExternal", String.class);
     }
